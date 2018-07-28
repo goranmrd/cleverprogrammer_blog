@@ -23,6 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/login/', view=login, kwargs={'template_name': 'login.html'}, name='login'),
     path('accounts/logout/', view=logout, kwargs={'template_name': 'logout.html', 'next_page': '/'}, name='logout'),
-	path('inbox/notifications/', include(notifications.urls, namespace='notifications')),
     path('', include('blog.urls')),
+    path('inbox/notifications/', include(notifications.urls, namespace='notifications')),
 ]
