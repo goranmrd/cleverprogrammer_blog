@@ -25,7 +25,9 @@ SECRET_KEY = '2p=0mbr(yom$_%p&+!_=u@rqx1e#lazt715^lqq)ty3o!bin)w'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+ALLOWED_HOSTS = ['*']
 
 LOGIN_REDIRECT_URL = '/'
 
@@ -41,6 +43,7 @@ INSTALLED_APPS = [
 	'django.contrib.humanize',
     'blog',
 	'notifications',
+	'crispy_forms',
 ]
 
 MIDDLEWARE = [
