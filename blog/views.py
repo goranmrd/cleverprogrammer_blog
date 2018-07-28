@@ -12,6 +12,7 @@ def post_list(request):
     return render(request, 'blog/post_list.html', {'posts': posts})
 
 
+@login_required
 def my_unread_notifications(request):
     my_unreads = request.user.notifications.unread()
     return render(request, 'blog/unread_notifications.html', {'my_unreads': my_unreads})
