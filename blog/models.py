@@ -39,7 +39,7 @@ class Comment(models.Model):
 
 
 def my_handler(sender, instance, created, **kwargs):
-    notify.send(instance, recipient=User.objects.first(), verb='New comment has been added')
+    notify.send(instance, recipient=instance.post.author, verb='New comment has been added')
 
 
 post_save.connect(my_handler, sender=Comment)
