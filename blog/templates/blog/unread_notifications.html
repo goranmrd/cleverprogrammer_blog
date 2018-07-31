@@ -16,8 +16,11 @@
 			</div>
 		</div>
 		<hr>
-		<a href="{% url 'mark_as_read'%}">Mark All as Read</a>
+		
 	{% endfor %}
+	{% if my_unreads %}
+		<a href="{% url 'mark_as_read'%}">Mark All as Read</a>
+	{% endif %}
  	{#	{% for live_unread in live_unreads %}#}
 	{#		{{ live_unread }}#}
 	{#	{% endfor %}#}
