@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '2p=0mbr(yom$_%p&+!_=u@rqx1e#lazt715^lqq)ty3o!bin)w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
@@ -126,3 +126,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+DATABASES['default'] = dj_database_url.config()
